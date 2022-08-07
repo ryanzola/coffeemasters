@@ -12,6 +12,11 @@
 		DB998B0928965445009C286F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB998B0828965445009C286F /* Assets.xcassets */; };
 		DB998B0C28965445009C286F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB998B0B28965445009C286F /* Preview Assets.xcassets */; };
 		DB998B132896FB01009C286F /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB998B122896FB01009C286F /* Offer.swift */; };
+		DB998B15289EABAA009C286F /* OffersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB998B14289EABAA009C286F /* OffersPage.swift */; };
+		DBFE5CC5289F36C7002D81AA /* MenuPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE5CC4289F36C7002D81AA /* MenuPage.swift */; };
+		DBFE5CC7289F36DE002D81AA /* OrdersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE5CC6289F36DE002D81AA /* OrdersPage.swift */; };
+		DBFE5CC9289F36EC002D81AA /* InfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE5CC8289F36EC002D81AA /* InfoPage.swift */; };
+		DBFE5CCB289F38B4002D81AA /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFE5CCA289F38B4002D81AA /* ProductItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		DB998B0828965445009C286F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB998B0B28965445009C286F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB998B122896FB01009C286F /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		DB998B14289EABAA009C286F /* OffersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersPage.swift; sourceTree = "<group>"; };
+		DBFE5CC4289F36C7002D81AA /* MenuPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPage.swift; sourceTree = "<group>"; };
+		DBFE5CC6289F36DE002D81AA /* OrdersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersPage.swift; sourceTree = "<group>"; };
+		DBFE5CC8289F36EC002D81AA /* InfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPage.swift; sourceTree = "<group>"; };
+		DBFE5CCA289F38B4002D81AA /* ProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +63,10 @@
 		DB998B0328965443009C286F /* CoffeeMasters */ = {
 			isa = PBXGroup;
 			children = (
-				DB998B0428965443009C286F /* CoffeeMastersApp.swift */,
+				DBFE5CC3289F368A002D81AA /* PageViews */,
+				DBFE5CC2289F3679002D81AA /* Views */,
 				DB998B0628965443009C286F /* ContentView.swift */,
-				DB998B122896FB01009C286F /* Offer.swift */,
+				DB998B0428965443009C286F /* CoffeeMastersApp.swift */,
 				DB998B0828965445009C286F /* Assets.xcassets */,
 				DB998B0A28965445009C286F /* Preview Content */,
 			);
@@ -68,6 +79,26 @@
 				DB998B0B28965445009C286F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBFE5CC2289F3679002D81AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB998B122896FB01009C286F /* Offer.swift */,
+				DBFE5CCA289F38B4002D81AA /* ProductItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBFE5CC3289F368A002D81AA /* PageViews */ = {
+			isa = PBXGroup;
+			children = (
+				DB998B14289EABAA009C286F /* OffersPage.swift */,
+				DBFE5CC4289F36C7002D81AA /* MenuPage.swift */,
+				DBFE5CC6289F36DE002D81AA /* OrdersPage.swift */,
+				DBFE5CC8289F36EC002D81AA /* InfoPage.swift */,
+			);
+			path = PageViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +172,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB998B132896FB01009C286F /* Offer.swift in Sources */,
+				DB998B15289EABAA009C286F /* OffersPage.swift in Sources */,
+				DBFE5CC5289F36C7002D81AA /* MenuPage.swift in Sources */,
+				DBFE5CC9289F36EC002D81AA /* InfoPage.swift in Sources */,
+				DBFE5CCB289F38B4002D81AA /* ProductItem.swift in Sources */,
 				DB998B0728965443009C286F /* ContentView.swift in Sources */,
+				DBFE5CC7289F36DE002D81AA /* OrdersPage.swift in Sources */,
 				DB998B0528965443009C286F /* CoffeeMastersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
