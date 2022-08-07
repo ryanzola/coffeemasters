@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var menuManager: MenuManager
+    @EnvironmentObject var cartManager: CartManager
+    
     var body: some View {
         TabView {
             MenuPage()
@@ -24,7 +27,7 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "cart")
                     Text("Order")
-                }
+                }.badge(cartManager.products.count)
             InfoPage()
                 .tabItem {
                     Image(systemName: "info")
@@ -38,5 +41,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(MenuManager())
+            .environmentObject(CartManager())
     }
 }
