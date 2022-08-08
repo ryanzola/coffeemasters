@@ -13,6 +13,7 @@ struct ProductItem: View {
     var body: some View {
         VStack {
             AsyncImage(url: product.imageURL)
+                .scaledToFit()
                 .frame(width: 300, height: 150)
    
             HStack {
@@ -22,21 +23,18 @@ struct ProductItem: View {
                         .bold()
                     Text("$\(product.price, specifier: "%.2f")")
                         .font(.caption)
-
-                }.padding(8)
+                }
                 Spacer()
                 LikeButton(product: product)
-            }
+            }.padding(8)
         }
-        .background(Color("SurfaceBackground"))
         .cornerRadius(10)
-        .padding(.trailing)
     }
 }
 
 struct ProductItem_Previews: PreviewProvider {
     static var previews: some View {
-        ProductItem(product: Product(id: 1, name: "Dummy Product", description: "", price: 4.25, image: ""))
-            .environmentObject(LikesManager())
+        ProductItem(product: Product(id: 1, name: "Dummy Product", description: "", price: 4.25, image: "blackamericano.png"))
+            .environmentObject(LikesManager()).padding()
     }
 }

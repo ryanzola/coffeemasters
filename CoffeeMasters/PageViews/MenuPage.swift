@@ -17,21 +17,21 @@ struct MenuPage: View {
                 ForEach(menuManager.menu) { category in
                     if category.filteredItems(text: search).count > 0 {
                         Text(category.name)
+                            .font(.title2)
                             .bold()
                             .listRowBackground(Color("Background"))
                             .foregroundColor(Color("Secondary"))
-                            .padding()
+                            .padding(.top)
                     }
                     
                     ForEach(category.filteredItems(text: search)) { item in
                         ZStack {
                             NavigationLink(destination: DetailsPage(product: item)) {
                                 EmptyView()
-                            }.opacity(0)
+                            }
                             ProductItem(product: item)
-                                .padding(.top)
-                                .padding(.leading)
-                                .padding(.bottom, 12)
+                                
+                                
 
                         }
                         

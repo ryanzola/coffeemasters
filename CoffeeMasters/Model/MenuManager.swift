@@ -9,15 +9,7 @@ import Foundation
 import Alamofire
 
 class MenuManager: ObservableObject {
-    @Published var menu: [Category] = [
-        Category(name: "HOT COFFEE", products: [
-            Product(id: 0, name: "", description: "", price: 1.25, image: ""),
-            Product(id: 1, name: "", description: "", price: 1.25, image: ""),
-            Product(id: 2, name: "", description: "", price: 1.25, image: ""),
-            Product(id: 0, name: "", description: "", price: 1.25, image: ""),
-            Product(id: 0, name: "", description: "", price: 1.25, image: "")
-        ])
-    ]
+    @Published var menu: [Category] = []
     
     init() {
         refreshItemsFromNetwork()
