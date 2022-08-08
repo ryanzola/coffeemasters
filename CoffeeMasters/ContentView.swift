@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var menuManager: MenuManager
     @EnvironmentObject var cartManager: CartManager
     
     var body: some View {
@@ -41,7 +40,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(MenuManager())
             .environmentObject(CartManager())
+            .environmentObject(MenuManager())
+            .environmentObject(LikesManager())
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailsPage: View {
     @EnvironmentObject var cartManager: CartManager
+    @Environment(\.dismiss) var dismiss
     @State var quantity = 1
     var product: Product
     
@@ -49,12 +50,17 @@ struct DetailsPage: View {
             
             Button("Add \(quantity) to cart") {
                 cartManager.add(product: product, quantity: quantity)
+                dismiss()
             }
             .padding()
             .frame(width: 250.0)
             .background(Color("Alternative2"))
             .foregroundColor(Color.black)
             .cornerRadius(25)
+        }
+        .navigationTitle(product.name)
+        .toolbar {
+            LikeButton(product: product)
         }
     }
 }
@@ -63,5 +69,6 @@ struct DetailsPage_Previews: PreviewProvider {
     static var previews: some View {
         DetailsPage(product: Product(id: 1, name: "Dummy Product", description: "A yummy little coffee drink to prevent me from killing myself", price: 1.25, image: "blackamericano.png"))
             .environmentObject(CartManager())
+            .environmentObject(LikesManager())
     }
 }
